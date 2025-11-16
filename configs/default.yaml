@@ -1,0 +1,48 @@
+data:
+  symbol: "^NSEI"
+  start_date: "2015-01-01"  # 9 years of data
+  end_date: "2024-01-01"
+  
+  train_end: "2021-12-31"  
+  val_end: "2023-01-01"   
+  
+  lookback_window: 64  
+  horizon: 5  
+  
+features:
+  n_features: 12
+  normalization_window: 252
+
+model:
+  tcn:
+    n_filters: 64  
+    kernel_size: 3  
+    n_layers: 6 
+    dilations: [1, 2, 4, 8, 16, 32]  
+    dropout: 0.2 
+    embedding_dim: 128
+
+training:
+  batch_size: 256
+  learning_rate: 0.001 
+  n_epochs: 100
+  
+ 
+  lambda_vol: 0.1 
+  lambda_reg: 0.0001 
+  
+  early_stopping_patience: 10 
+
+risk_map:
+  kappa: 0.003  
+  gamma: 1.0 
+  k: 0.1 
+  sigma_min: 0.005 
+  w_max: 1.0  
+  delta_max: 0.2
+
+backtest:
+  initial_capital: 1000000  
+  execution_lag: 1  
+  stt_rate: 0.001 
+  brokerage_rate: 0.0003 

@@ -1,0 +1,120 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.python-version
+.vscode/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+!*example*.ipynb  # Keep example notebooks if needed
+
+# Data files (usually too large for git)
+data/*.csv
+data/*.parquet
+data/*.h5
+data/*.pkl
+data/raw/
+data/processed/
+*.zip
+*.tar.gz
+
+# Model files
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.pkl
+*.joblib
+*.safetensors
+models/saved/
+models/checkpoints/
+best_model.pth
+final_model.pth
+
+# Logs and results
+logs/
+*.log
+runs/
+tensorboard/
+wandb/
+mlruns/
+results/
+outputs/
+experiments/outputs/
+experiments/results/
+
+# Backtest results
+backtest_results/
+*.png
+*.jpg
+*.pdf
+!docs/*.png  # Keep documentation images
+
+# Config overrides (keep only default)
+configs/*.yaml
+!configs/default.yaml
+configs/local/
+configs/personal/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+secrets.yaml
+api_keys.py
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+.hypothesis/
+
+# Documentation builds
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# Temporary files
+tmp/
+temp/
+scratch/
+*.tmp
+*.bak
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Performance profiling
+*.prof
+*.lprof
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Project specific
+cache/
+downloads/
+portfolio_weights.csv
+positions.csv
+trades.csv
