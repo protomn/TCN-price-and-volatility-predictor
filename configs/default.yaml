@@ -46,3 +46,8 @@ backtest:
   execution_lag: 1  
   stt_rate: 0.001 
   brokerage_rate: 0.0003 
+
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_to_file: true
+  log_dir: "logs"
