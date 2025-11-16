@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
-def steup_logger(name: str, log_level: str = "INFO"):
+def setup_logger(name: str, log_level: str = "INFO"):
 
     logger_dir = Path("logs")
     logger_dir.mkdir(exist_ok = True)
