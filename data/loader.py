@@ -104,16 +104,3 @@ class DataLoader:
         self.logger.info("Data fetching completed successfully")
 
         return data
-    
-
-if __name__ == "__main__":
-
-    cfg_path = pathlib.Path(__file__).resolve().parents[1] / "configs" / "default.yaml"
-
-    with open(cfg_path, "r") as f:
-
-        cfg = yaml.safe_load(f)
-
-    loader = DataLoader(cfg)
-    data = loader.fetch_data("^NSEI")
-    print(data.head())

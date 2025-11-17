@@ -283,24 +283,3 @@ def make_datasets(price_df: pd.DataFrame,
     )
 
     return train, val, test
-
-if __name__ == "__main__":
-
-    from data.loader import DataLoader
-
-    cfg_path = pathlib.Path(__file__).resolve().parents[1] / "configs" / "default.yaml"
-
-    with open(cfg_path, "r") as f:
-
-        cfg = yaml.safe_load(f)
-
-    loader = DataLoader(cfg)
-    price_df = loader.fetch_data()
-
-
-    train, val, test = make_datasets(price_df, cfg)
-
-    print("Train X shape:", train["X"].shape)
-    print("Val   X shape:", val["X"].shape)
-    print("Test  X shape:", test["X"].shape)
-    print("Example train dates:", train["dates"][:5])

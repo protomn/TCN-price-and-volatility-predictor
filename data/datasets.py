@@ -113,22 +113,3 @@ def build_dataloaders(cfg: Dict) -> Tuple[DataLoader,
                 )
         
     return train_loader, val_loader, test_loader
-    
-if __name__ == "__main__":
-
-    cfg_path = pathlib.Path(__file__).resolve().parents[1] / "configs" / "default.yaml"
-
-    with open(cfg_path, "r") as f:
-
-        cfg = yaml.safe_load(f)
-
-    train_loader, val_loader, test_loader = build_dataloaders(cfg)
-
-    print("Number of train batches:", len(train_loader))
-    
-    batch = next(iter(train_loader))
-    x, y, z = batch["x"], batch["y"], batch["z"]
-
-    print("Batch x shape:", x.shape)  
-    print("Batch y shape:", y.shape)  
-    print("Batch z shape:", z.shape)  
