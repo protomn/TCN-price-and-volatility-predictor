@@ -12,6 +12,7 @@ pip-log.txt
 pip-delete-this-directory.txt
 .python-version
 .vscode/
+logs/
 
 # Jupyter Notebooks
 .ipynb_checkpoints
