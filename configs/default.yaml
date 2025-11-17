@@ -33,12 +33,12 @@ training:
   weight_decay: 1e-4
 
 risk_map:
-  kappa: 0.003  
-  gamma: 1.0 
-  k: 0.1 
-  sigma_min: 0.005 
-  w_max: 1.0  
-  delta_max: 0.2
+  k: 0.1          # risk budget scaling in w ∝ k * s / sigma
+  kappa: 0.0005   # transaction-cost threshold (tune later)
+  sigma_min: 0.005
+  w_max: 1.0      # per-asset max leverage |w_i|
+  delta_max: 0.2  # max per-step change in w_i
+  leverage_max: 1.0   # total leverage cap ∑|w_i|
 
 backtest:
   initial_capital: 1000000  
